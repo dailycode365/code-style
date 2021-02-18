@@ -110,7 +110,7 @@ ESLint 是在 ECMAScript/JavaScript 代码中识别和报告模式匹配的工�
 
 此处设置多为关闭 airbnb-base 中的各别 rule
 
-```json
+```js
 {
 	//开启的规则
 	"extends": ["airbnb-base", "prettier"],
@@ -253,9 +253,9 @@ ESLint 是在 ECMAScript/JavaScript 代码中识别和报告模式匹配的工�
 		}
 	],
 	"parserOptions": {
-		;//额外的语言特性
+		//额外的语言特性
 		"ecmaFeatures": {
-			;//允许装饰器写法
+			//允许装饰器写法
 			"legacyDecorators": 1
 		}
 	}
