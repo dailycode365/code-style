@@ -195,34 +195,34 @@ ESLint 是在 ECMAScript/JavaScript 代码中识别和报告模式匹配的工�
 	// 覆盖
 	"overrides": [
 		{
-			// 匹配的特定文件
+			//匹配的特定文件
 			"files": ["**/*.ts"],
-			// 将 TypeScript 转换成与 estree 兼容的形式，以便在ESLint中使用
+			//将 TypeScript 转换成与 estree 兼容的形式，以便在ESLint中使用
 			"parser": "@typescript-eslint/parser",
 			"parserOptions": {
-				// 使用的 ECMAScript 版本
+				//使用的 ECMAScript 版本
 				"ecmaVersion": 2018,
-				// 设置为 "script" (默认) 或 "module"（如果你的代码是 ECMAScript 模块)。
+				//设置为 "script" (默认) 或 "module"（如果你的代码是 ECMAScript 模块)。
 				"sourceType": "module",
-				// 对不支持的ts版本给出警告
+				//对不支持的ts版本给出警告
 				"warnOnUnsupportedTypeScriptVersion": true
 			},
-			// 第三方插件，定义额外的规则、环境和配置等
+			//第三方插件，定义额外的规则、环境和配置等
 			"plugins": ["@typescript-eslint"],
 			"rules": {
-				// 要求 switch 语句中有 default 分支
+				//要求 switch 语句中有 default 分支
 				"default-case": "off",
-				// 禁止类成员中出现重复的名称
+				//禁止类成员中出现重复的名称
 				"no-dupe-class-members": "off",
-				// 禁用 Array 构造函数
+				//禁用 Array 构造函数
 				"no-array-constructor": "off",
-				// This rule extends the base eslint/no-array-constructor rule. It adds support for the generically typed Array constructor (new Array<Foo>()).
+				//This rule extends the base eslint/no-array-constructor rule. It adds support for the generically typed Array constructor (new Array<Foo>()).
 				"@typescript-eslint/no-array-constructor": "warn",
-				// Disallow the use of custom TypeScript modules and namespaces
+				//Disallow the use of custom TypeScript modules and namespaces
 				"@typescript-eslint/no-namespace": "error",
-				// 禁止在变量定义之前使用它们
+				//禁止在变量定义之前使用它们
 				"no-use-before-define": "off",
-				// This rule extends the base eslint/no-use-before-define rule. It adds support for type, interface and enum declarations.
+				//This rule extends the base eslint/no-use-before-define rule. It adds support for type, interface and enum declarations.
 				"@typescript-eslint/no-use-before-define": [
 					"warn",
 					{
@@ -232,9 +232,9 @@ ESLint 是在 ECMAScript/JavaScript 代码中识别和报告模式匹配的工�
 						"typedefs": false
 					}
 				],
-				// 禁止出现未使用过的变量
+				//禁止出现未使用过的变量
 				"no-unused-vars": "off",
-				// This rule extends the base eslint/no-unused-vars rule. It adds support for TypeScript features, such as types.
+				//This rule extends the base eslint/no-unused-vars rule. It adds support for TypeScript features, such as types.
 				"@typescript-eslint/no-unused-vars": [
 					"error",
 					{
@@ -242,20 +242,20 @@ ESLint 是在 ECMAScript/JavaScript 代码中识别和报告模式匹配的工�
 						"ignoreRestSiblings": true
 					}
 				],
-				// 禁用不必要的构造函数
+				//禁用不必要的构造函数
 				"no-useless-constructor": "off",
 				// This rule extends the base eslint/no-useless-constructor rule. It adds support for:1.constructors marked as protected / private (i.e. marking a constructor as non-public),2.public constructors when there is no superclass,3.constructors with only parameter properties.
 				"@typescript-eslint/no-useless-constructor": "warn",
 				"import/extensions": 0,
-				// Ensures an imported module can be resolved to a module on the local filesystem
+				//Ensures an imported module can be resolved to a module on the local filesystem
 				"import/no-unresolved": 0
 			}
 		}
 	],
 	"parserOptions": {
-		// 额外的语言特性
+		//额外的语言特性
 		"ecmaFeatures": {
-			// 允许装饰器写法
+			//允许装饰器写法
 			"legacyDecorators": 1
 		}
 	}
