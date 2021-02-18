@@ -112,51 +112,51 @@ ESLint 是在 ECMAScript/JavaScript 代码中识别和报告模式匹配的工�
 
 ```json
 {
-   // 开启的规则
+	//开启的规则
 	"extends": ["airbnb-base", "prettier"],
-   //一个对Babel解析器的包装，使其能够与 ESLint 兼容
+	//一个对Babel解析器的包装，使其能够与 ESLint 兼容
 	"parser": "babel-eslint",
-	// 脚本在执行期间访问的额外的全局变量
+	//脚本在执行期间访问的额外的全局变量
 	"globals": {
 		"cc": true,
 		"sp": true,
 		"CC_EDITOR": true
 	},
-	// 启用的规则及其各自的错误级别
-	// "off" 或 0 - 关闭规则,
-	// "warn" 或 1 - 开启规则，使用警告级别的错误：warn (不会导致程序退出),
-	// "error" 或 2 - 开启规则，使用错误级别的错误：error (当被触发的时候，程序会退出)
+	//启用的规则及其各自的错误级别
+	//"off"或0-关闭规则,
+	//"warn"或1-开启规则，使用警告级别的错误：warn (不会导致程序退出),
+	//"error"或2-开启规则，使用错误级别的错误：error (当被触发的时候，程序会退出)
 	"rules": {
-		// 导入/无外部依赖项
+		//导入/无外部依赖项
 		"import/no-extraneous-dependencies": 0,
-		// 导入/无循环依赖
+		//导入/无循环依赖
 		"import/no-cycle": "warn",
-		// 箭头函数的参数使用圆括号
+		//箭头函数的参数使用圆括号
 		"arrow-parens": 0,
-		// 优先使用数组和对象解构
+		//优先使用数组和对象解构
 		"prefer-destructuring": 0,
-		// 禁止使用异步函数作为 Promise executor
+		//禁止使用异步函数作为 Promise executor
 		"no-async-promise-executor": "warn",
-		// 导入/首选默认导出
+		//导入/首选默认导出
 		"import/prefer-default-export": 0,
-		// 强制类方法使用 this
+		//强制类方法使用 this
 		"class-methods-use-this": 0,
-		// 禁用 console
+		//禁用 console
 		"no-console": 0,
-		// "no-console": ["warn", { "allow": ["error", "warn"] }],
-		// 要求使用模板字面量而非字符串连接
+		//"no-console": ["warn", { "allow": ["error", "warn"] }],
+		//要求使用模板字面量而非字符串连接
 		"prefer-template": "off",
-		// 禁用一元操作符 ++ 和 --
+		//禁用一元操作符 ++ 和 --
 		"no-plusplus": 0,
-		// 禁止标识符中有悬空下划线
+		//禁止标识符中有悬空下划线
 		"no-underscore-dangle": "off",
-		// 禁用嵌套的三元表达式
+		//禁用嵌套的三元表达式
 		"no-nested-ternary": "warn",
-		// 导入/未命名为默认
+		//导入/未命名为默认
 		"import/no-named-default": 0,
-		// Forbid Webpack loader syntax in imports.
+		//Forbid Webpack loader syntax in imports.
 		"import/no-webpack-loader-syntax": 0,
-		// 导入扩展名
+		//导入扩展名
 		"import/extensions": [
 			"error",
 			"always",
@@ -166,24 +166,24 @@ ESLint 是在 ECMAScript/JavaScript 代码中识别和报告模式匹配的工�
 				"js": "never"
 			}
 		],
-		// 导入默认导出
+		//导入默认导出
 		"import/default": "error",
-		// 禁止对函数参数再赋值
+		//禁止对函数参数再赋值
 		"no-param-reassign": [
 			"error",
 			{
 				"props": false
 			}
 		],
-		// 强制使用骆驼拼写法命名约定
+		//强制使用骆驼拼写法命名约定
 		"camelcase": 0,
-		// 禁用按位运算符
+		//禁用按位运算符
 		"no-bitwise": "off",
-		// 要求箭头函数体使用大括号
+		//要求箭头函数体使用大括号
 		"arrow-body-style": ["error", "as-needed"],
-		// 禁用特定的全局变量
+		//禁用特定的全局变量
 		"no-restricted-globals": "off",
-		// 要求或禁止类成员之间出现空行
+		//要求或禁止类成员之间出现空行
 		"lines-between-class-members": [
 			"error",
 			"always",
@@ -192,17 +192,17 @@ ESLint 是在 ECMAScript/JavaScript 代码中识别和报告模式匹配的工�
 			}
 		]
 	},
-	// 覆盖
+	//覆盖
 	"overrides": [
 		{
 			//匹配的特定文件
 			"files": ["**/*.ts"],
-			//将 TypeScript 转换成与 estree 兼容的形式，以便在ESLint中使用
+			//将TypeScript转换成与estree 兼容的形式，以便在ESLint中使用
 			"parser": "@typescript-eslint/parser",
 			"parserOptions": {
-				//使用的 ECMAScript 版本
+				//使用的ECMAScript版本
 				"ecmaVersion": 2018,
-				//设置为 "script" (默认) 或 "module"（如果你的代码是 ECMAScript 模块)。
+				//设置为"script"(默认)或"module"（如果你的代码是 ECMAScript 模块)。
 				"sourceType": "module",
 				//对不支持的ts版本给出警告
 				"warnOnUnsupportedTypeScriptVersion": true
@@ -210,11 +210,11 @@ ESLint 是在 ECMAScript/JavaScript 代码中识别和报告模式匹配的工�
 			//第三方插件，定义额外的规则、环境和配置等
 			"plugins": ["@typescript-eslint"],
 			"rules": {
-				//要求 switch 语句中有 default 分支
+				//要求switch语句中有default分支
 				"default-case": "off",
 				//禁止类成员中出现重复的名称
 				"no-dupe-class-members": "off",
-				//禁用 Array 构造函数
+				//禁用Array构造函数
 				"no-array-constructor": "off",
 				//This rule extends the base eslint/no-array-constructor rule. It adds support for the generically typed Array constructor (new Array<Foo>()).
 				"@typescript-eslint/no-array-constructor": "warn",
